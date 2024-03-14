@@ -7,13 +7,7 @@ let fullName = 'Jennifer Kohl';
 let currentYear = '2024';
 let profilePicture = 'images/JLKohl.jpg';
 let otherFood = 'cake';
-let favFoods = ["tacos", "BBQ", "nachos"];
-let favFoods2 = ["tacos", "BBQ", "nachos"];
-favFoods2.push('cake');
-let favFoods3 = ["tacos", "BBQ", "nachos", 'cake'];
-favFoods3.shift();
-let favFoods4 = ["BBQ", "nachos", 'cake'];
-favFoods4.pop()
+
 
 /* Step 3 - Element Variables */
 
@@ -28,13 +22,19 @@ nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = `${currentYear}`;
 imageElement.setAttribute('src', profilePicture);
 imageElement.setAttribute('alt', `Profile image of ${fullName}`);
-foodElement.textContent = favFoods;
-foodElement.innerHTML += `<br>${favFoods2}`;
-foodElement.innerHTML += `<br>${favFoods3}`;
-foodElement.innerHTML += `<br>${favFoods4}`;
 
 /* Step 5 - Array */
+let favFoods = ["tacos", "BBQ", "nachos"];
+foodElement.innerHTML = `<br>${favFoods}`;
 
+const newFavFood = 'cake';
+favFoods.push(newFavFood);
+foodElement.innerHTML += `<br>${favFoods}`;
 
+favFoods.shift();
+foodElement.innerHTML += `<br>${favFoods}`;
+
+favFoods.pop()
+foodElement.innerHTML += `<br>${favFoods}`;
 
 
