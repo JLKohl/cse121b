@@ -28,31 +28,45 @@ const displayTemples = (temples) => {
 /* async getTemples Function using fetch()*/
 const getTemples = async () =>{
     const response = await fetch('https://byui-cse.github.io/cse121b-ww-course/resources/temples.json');
-    const templeList = await response.json();
+    templeList = await response.json();
     displayTemples(templeList);
 
 }
 
 /* reset Function */
-function reset(templesElement){
-    templesElement.removeChild(article)
+function reset(){
+    while (templesElement.childElementCount > 0){
+        templesElement.removeChild(templesElement.lastChild)
+    }  
 }
 
 /* filterTemples Function */
 function filterTemples(temples){
-    reset(temples);
-    let filter = document.getElementById('filtered');
+    reset();
+    let filter = document.querySelector('#filtered');
 
-    switch (filter){
+    switch (filter.value){
         case 'utah':
-            displayTemples.filter
+            displayTemples(
+                temples.filter((temple) => {
+                    return String(temple.location).split(', ')[1] == "Utah"
+            }));
             break;
         case 'notutah':
+            displayTemples(
+                temples.filter((temple) => {
+                    return String(temple.location).split(', ')[1] != "Utah"
+            }));
             break;
         case 'older':
+            displayTemples(
+                temples.filter((temple) => {
+                    return Number(String(temple.dedicated).split(', ')[0]) < 1950 
+            }));
             Date.parse(string)
             break;
         case 'all':
+            displayTemples(temples);
             break;   
     }
 
