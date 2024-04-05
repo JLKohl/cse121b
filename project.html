@@ -28,14 +28,18 @@
 <main id="Project">
     <select id="filtered" title="Choose a data filter.">
         <option value="" disabled selected>Filter Ride Times</option>
-        <option value="utah">Longest wait</option>
-        <option value="notutah">Shortest wait</option>
-        <option value="older">Open rides</option>
-        <option value="all">All Rides</option>
+        <option value="longestWait">Longest wait</option>
+        <option value="shortestWait">Shortest wait</option>
+        <option value="openRides">Open rides</option>
+        <option value="allRides">All Rides</option>
       </select> 
+      <p> make a selection to see your prefered rides</p>
+      <div id="lands">
+      </div>
 </main>
 <footer>
-  &copy;<span id="year"></span> | CSE 121b | Project
+  &copy;<span id="year"></span> | CSE 121b | Project | <a href="https://queue-times.com/en-US">Powered by Queue-Times.com</a>
 </footer>
+<script src="project/project.js"></script>
 </body>
 </html>
