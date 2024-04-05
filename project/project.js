@@ -1,4 +1,10 @@
-/* W05: Programming Tasks */
+// toggle menu in small view
+const toggleMenu = () => {
+    document.querySelector('#menu').classList.toggle('open');
+}
+
+document.querySelector('#toggleMenu').addEventListener('click', toggleMenu);
+
 
 /* Declare and initialize global variables */
 const templesElement = document.querySelector('#temples');
