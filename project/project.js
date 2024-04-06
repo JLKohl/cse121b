@@ -9,9 +9,14 @@ const displayRides = (rides) => {
     rides.forEach((ride) =>{
         let article = document.createElement('article');  
         
-        let p = document.createElement('p');
-        p.innerText = ride.name;
+        let h2 = document.createElement('h2');
+        h2.innerHTML = ride.name
+
+        let h3 = document.createElement('h3');
+        h3.innerHTML = `wait time: ${ride.wait_time}`
         
+        article.appendChild(h2)
+        article.appendChild(h3)
 
         ridesElement.appendChild(article);
     
@@ -33,16 +38,28 @@ function reset(){
 }
 
 /* filterRides Function */
-function filterRides(){
+function filterRides(rides){
     reset();
     let filter = document.querySelector('#filtered');
 
     switch (filter.value){
-        case 'all':
+        case 'longestWait':
+            displayRides(
+                rides.filter((ride) => {
+                    return ride.wait_time > 35
+                }));
+            break;
+        case 'shortestWait':
+            displayRides(
+                rides.filter((ride) => {
+                    return ride.wait_time <=35
+                }));
+            break;
+        case 'allRides':
             displayRides(rides);
+            break;
     }
 }
 
 getRides();
 document.querySelector('#filtered').addEventListener('change', () => { filterRides(rideList) });
-/* Event Listener */

@@ -65,59 +65,42 @@ nav ul li a:hover {
 h1,
 h2 {
     text-align: center;
-    margin: 1rem 0 .5rem;
+    margin: 2rem 0 .5rem;
 }
 
 h1 {
-    border-bottom: 3px solid #ccc;
+    border-bottom: 3px solid #3c3c3c;
 }
 
-#project h1 {
+h1 {
     margin-top: 80px;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: navy;
-    text-align: center;
-    margin-top: 25px;
-}
-
-h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
 header {
-    margin-top: 70px;
+    margin-top: 60px;
 }
-
-#rides {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: .5rem;
-    align-items: center;
-    margin-bottom: 3rem;
+select {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: larger;
+    text-align: center;
+    background-color: rgb(237, 237, 216, .50);
+    
 }
-
-#rides article {
-    height: 250px;
+article {
+    height: 150px;
     margin: .5rem;
     border: 1px solid rgba(0, 0, 0, .1);
+    background-color:  rgba(182, 113, 183, 0.15);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#rides h4 {
-    color: navy;
-    font-size: smaller;
+    text-align: center
 }
 footer {
-    background-color: rgb(41, 58, 109);
-    color: white;
+    background-color: white;
+    color: black;
     padding: 15px;
     text-align: center;
     width: 100%;

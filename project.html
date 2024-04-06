@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE 121b | Final Project: Magic Kingdome Ride Times</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | Final Project: Magic Kingdome Ride Times</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <nav>
     <ul id="menu">
-        <li><a id="toggleMenu">&equiv;</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="w01-task.html">W1 Task</a></li>
-        <li><a href="w03-task.html">W3 Task</a></li>
-        <li><a href="w04-task.html">W4 Task</a></li>
-        <li><a href="w05-task.html">W5 Task</a></li>
-        <li><a href="project.html" class="active">Project</a></li>
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="w01-task.html">W1 Task</a></li>
+      <li><a href="w03-task.html">W3 Task</a></li>
+      <li><a href="w04-task.html">W4 Task</a></li>
+      <li><a href="w05-task.html">W5 Task</a></li>
+      <li><a href="project.html" class="active">Project</a></li>
     </ul>
 </nav>>
 <header>
-    <h1>Magic Kingdom Ride Times</h1>
+  <h1>Magic Kingdom Ride Times</h1>
 </header>
+  <h2>select a filter to see the rides with the longest and shortest wait times</h2>
 <main id="project">
     <select id="filtered" title="Choose a data filter.">
-        <option value="" disabled selected>Filter Ride Times</option>
-        <option value="longestWait">Longest wait</option>
-        <option value="shortestWait">Shortest wait</option>
-        <option value="openRides">Open rides</option>
-        <option value="allRides">All Rides</option>
-      </select> 
-      <p> make a selection to see your prefered rides</p>
-      <div id="rides" class="wrapper">
-
-      </div>
+      <option value="" disabled selected>Filter Ride Times</option>
+      <option value="longestWait">Longest wait</option>
+      <option value="shortestWait">Shortest wait</option>
+      <option value="allRides">All Rides</option>
+    </select> 
+    <div id="rides">
+    </div>
 </main>
 <footer>
   &copy;<span id="year"></span> | CSE 121b | Project | <a href="https://queue-times.com/en-US">Powered by Queue-Times.com</a>
